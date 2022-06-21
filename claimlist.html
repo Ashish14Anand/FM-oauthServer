@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claims List</title>
+    <link rel="stylesheet" href="clamis.css">
+</head>
+
+<body>
+    <h1>Types of claims:-</h1>
+    <h2>Manage Master Claims</h2>
+    <div class="row">
+        <form>
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter Name">
+            </div>
+            <div>
+                <label for="desc">Discription</label>
+                <input type="text" id="desc" placeholder="Enter Claim Details">
+            </div>
+            <div>
+                <label for="setclaim">Choose Claim:</label>
+                <select id="setclaim" onclick="showDiv(this)">
+                    <option value="0">Choose One...</option>
+                    <option value="1">Boolean</option>
+                    <option value="2">Integer</option>
+                    <option value="3">String</option>
+                </select>
+            </div>
+            <div id="Choose">
+                <input type="radio" id="Gender" name="gender">
+                <label for="Gender">Male</label></br>
+                <input type="radio" id="Gender1" name="gender">
+                <label for="Gender1">FeMale</label>
+
+            </div>
+            <div id="str">
+                <textarea name="text" id="int_row" cols="30" rows="4"></textarea>
+            </div>
+            <div id="int">
+                I am an Integer
+            </div>
+        </form>
+    </div>
+    <script>
+        function showDiv(select) {
+
+            if (select.value == 1) {
+                document.getElementById('Choose').style.display = "block";
+            } else {
+                document.getElementById('Choose').style.display = "none";
+            }
+            if (select.value == 2) {
+                document.getElementById('int').style.display = "block";
+            } else {
+                document.getElementById('int').style.display = "none";
+            }
+            if (select.value == 3) {
+                document.getElementById('str').style.display = "block";
+            } else {
+                document.getElementById('str').style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
